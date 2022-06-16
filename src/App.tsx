@@ -1,11 +1,11 @@
-import { Button } from "@chakra-ui/react";
+import { Input } from "@chakra-ui/react";
 import React from "react";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Button variant="outline">Search</Button>
+      <Input placeholder="Roles" variant="search" />
     </div>
   );
 }

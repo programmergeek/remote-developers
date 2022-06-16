@@ -40,6 +40,31 @@ const styledButton: ComponentStyleConfig = {
   defaultProps: {},
 };
 
+const styledInput: ComponentStyleConfig = {
+  baseStyle: {
+    borderColor: "brand.500",
+    field: {
+      fontFamily: "Raleway",
+      borderRadius: 3,
+    },
+  },
+  variants: {
+    search: {
+      field: {
+        border: "2px solid",
+        borderColor: "gray.300",
+        borderRadius: 3,
+        width: 400,
+        height: "50px",
+        fontSize: "20px",
+        _focus: {
+          borderColor: "brand.600",
+        },
+      },
+    },
+  },
+};
+
 export const theme = extendTheme({
   colors: {
     brand: {
@@ -57,5 +82,6 @@ export const theme = extendTheme({
   },
   components: {
     Button: styledButton,
+    Input: styledInput,
   },
 });
