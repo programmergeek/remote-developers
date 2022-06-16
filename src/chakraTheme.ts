@@ -22,6 +22,20 @@ const styledButton: ComponentStyleConfig = {
         bg: "brand.700",
       },
     }),
+
+    outline: {
+      border: "2px solid",
+      borderColor: "black",
+      fontWeight: 700,
+      _hover: {
+        bg: "white",
+        borderColor: "gray.500",
+        color: "gray.500",
+      },
+      _active: {
+        bg: "white",
+      },
+    },
   },
   defaultProps: {},
 };
