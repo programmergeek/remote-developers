@@ -1,6 +1,13 @@
 import { StylesConfig } from "react-select";
 import { Type } from "typescript";
 
+// constants
+const FONT = "Raleway";
+const TRANSITION_TIME = "150ms";
+const HOVER_COLOUR = "rgba(0, 179, 104, 0.25)";
+const SELECT_COLOUR = "rgba(0, 179, 104, 0.6)";
+const BORDER_COLOUR = "rgba(0, 179, 104)";
+
 export const customStyles: StylesConfig<Type> = {
   container: (provided) => {
     return {
@@ -17,11 +24,11 @@ export const customStyles: StylesConfig<Type> = {
       textAlign: "left",
       paddingLeft: 10,
       ":hover": {
-        borderColor: "#00b368",
+        borderColor: BORDER_COLOUR,
       },
-      boxShadow: "none",
-      fontFamily: "Raleway",
-      transition: "150ms",
+      boxShadow: "none", // remove blue outline
+      fontFamily: FONT, // use Raleway font from google fonts
+      transition: TRANSITION_TIME, // transitions should be 150ms long
     };
   },
   option: (provided, { isSelected }) => {
@@ -30,14 +37,15 @@ export const customStyles: StylesConfig<Type> = {
       textAlign: "left",
       paddingLeft: 10,
       ":hover": {
-        backgroundColor: isSelected
-          ? "rgba(0, 179, 104, 0.6)"
-          : "rgba(0, 179, 104, 0.25)",
+        // Do not change the background colour if selected
+        backgroundColor: isSelected ? SELECT_COLOUR : HOVER_COLOUR,
+        // Do not change the text color if selected
         color: isSelected ? "white" : "black",
       },
-      backgroundColor: isSelected ? "rgba(0, 179, 104, 0.6)" : "white",
-      fontFamily: "Raleway",
-      transition: "150ms",
+      // make the background color of the selected item rgba(0, 179, 104, 0.6)
+      backgroundColor: isSelected ? SELECT_COLOUR : "white",
+      fontFamily: FONT, // use Raleway font from google fonts
+      transition: TRANSITION_TIME, // transitions should be 150ms long
     };
   },
 };
