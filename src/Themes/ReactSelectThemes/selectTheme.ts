@@ -1,5 +1,4 @@
 import { StylesConfig } from "react-select";
-import { Type } from "typescript";
 
 // constants
 const FONT = "Raleway";
@@ -8,7 +7,7 @@ const HOVER_COLOUR = "rgba(0, 179, 104, 0.25)";
 const SELECT_COLOUR = "rgba(0, 179, 104, 0.6)";
 const BORDER_COLOUR = "rgba(0, 179, 104)";
 
-export const customStyles: StylesConfig<Type> = {
+export const customStyles: StylesConfig = {
   container: (provided) => {
     return {
       ...provided,
@@ -20,6 +19,7 @@ export const customStyles: StylesConfig<Type> = {
     return {
       ...provided,
       border: "2px solid #c5c5c5",
+      height: "50px",
       borderRadius: "3px",
       textAlign: "left",
       paddingLeft: 10,
