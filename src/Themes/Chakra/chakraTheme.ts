@@ -54,7 +54,6 @@ const styledInput: ComponentStyleConfig = {
         border: "2px solid",
         borderColor: "gray.300",
         borderRadius: 3,
-        width: 400,
         height: "50px",
         fontSize: "20px",
         _focus: {
